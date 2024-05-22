@@ -7,13 +7,13 @@ from flask import Flask
 app = Flask(__name__)
 
 
-@app.route("/",strict_slashes=False)
+@app.route("/", strict_slashes=False)
 def hello_hbnb():
     """ returns text"""
     return "Hello HBNB!"
 
 
-@app.route("/hbnb",strict_slashes=False)
+@app.route("/hbnb", strict_slashes=False)
 def hbnb():
     """returns hbnb"""
     return "HBNB!"
@@ -31,7 +31,7 @@ def pyt(text="is cool"):
     """ returns the value of python """
     text = text.replace("_", " ")
     return "Python {}".format(text)
-	
+
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")

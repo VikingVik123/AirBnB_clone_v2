@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """
 Script to start flask
+
+/number/<n>: Displays 'n is a number' only if <n> is an integer.
+/number_template/<n>: Displays an HTML page only if <n> is an integer.
 """
 from flask import Flask, render_template
 

@@ -131,6 +131,7 @@ class HBNBCommand(cmd.Cmd):
         for param in args[1:]:
             if "=" not in param:
                 continue
+
             key, value = param.split("=", 1)
             if value.startswith('"') and value.endswith('"'):
                 value = value[1:-1].replace("_", " ").replace('\\"', '"')
@@ -145,7 +146,8 @@ class HBNBCommand(cmd.Cmd):
                 except ValueError:
                     continue
 
-        setattr(new_instance, key, value)
+            if hasattr(new_instance, key):
+                setattr(new_instance, key, value)
 
         new_instance.save()
         print(new_instance.id)

@@ -14,8 +14,8 @@ from models.amenity import Amenity
 
 class DBStorage:
 
-    _engine = None
-    _session = None
+    __engine = None
+    __session = None
 
     def __init__(self):
         user = getenv("HBNB_MYSQL_USER")

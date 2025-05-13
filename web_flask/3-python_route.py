@@ -16,7 +16,7 @@ def hello_hbnb():
 @app.route("/hbnb", strict_slashes=False)
 def hbnb():
     """returns hbnb"""
-    return "HBNB!"
+    return "HBNB"
 
 
 @app.route("//c/<text>", strict_slashes=False)
@@ -25,7 +25,7 @@ def c(text):
     text = text.replace("_", " ")
     return "C {}".format(text)
 
-
+@app.route("/python", strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
 def pyt(text="is cool"):
     """ returns the value of python """

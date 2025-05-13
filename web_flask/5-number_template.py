@@ -19,7 +19,7 @@ def hello_hbnb():
 @app.route("/hbnb", strict_slashes=False)
 def hbnb():
     """returns hbnb"""
-    return "HBNB!"
+    return "HBNB"
 
 
 @app.route("//c/<text>", strict_slashes=False)
@@ -29,6 +29,7 @@ def c(text):
     return "C {}".format(text)
 
 
+@app.route("/python", strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
 def pyt(text="is cool"):
     """ returns the value of python """
@@ -45,8 +46,7 @@ def number(n):
 @app.route("/number_template/<int:n>", strict_slashes=False)
 def number_t(n):
     """ Displays a number """
-    return render_template('5-number.html')
-
+    return render_template('5-number.html', n=n)
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")

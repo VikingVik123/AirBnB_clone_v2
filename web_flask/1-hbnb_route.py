@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 
 @app.route("/", strict_slashes=False)
-@app.route("/hbnb", strict_slashes=False)
+@app.route("/", strict_slashes=False)
 def hello_hbnb():
     """ returns text """
     return "Hello HBNB!"
@@ -17,7 +17,7 @@ def hello_hbnb():
 @app.route("/hbnb", strict_slashes=False)
 def hbnb():
     """ returns the HBNB text"""
-    return "HBNB!"
+    return "HBNB"
 
 
 if __name__ == '__main__':
